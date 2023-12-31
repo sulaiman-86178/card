@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+    <div class="container">
+      <div class="left">
+
+<div class="card-container">
+
+
+      <div class="card">
+        <div class="front">
+
+
+          <div class="">
+            <img class="img1" src="bg-card-front.png" alt="">
+
+          </div>
+          <div class="c1">
+            <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+          </div>
+          <div class="c2">
+            <p class="p">0000 0000 0000 0000</p>
+          </div>
+          <div class="c3">
+             <div class="name">
+               <p>sulaiman</p>
+             </div>
+             <div class="cvc">
+               <p>00/00</p>
+             </div>
+          </div>
+        </div>
+        <div class="back">
+            <img class="img" src="bg-card-back.png" alt="">
+        </div>
+      </div>
+</div>
+  </div>
+
+
+         <!-- -------------left--------- -->
+      <div class="right">
+        <form class="" id="myform"  method="post">
+          <div class="cont">
+            <div class="">
+                <label for="">CARDHOLDER NAME</label>
+            </div>
+            <div class="">
+              <input class="input" id="name" type="text" name="" value="" placeholder="felicia leire">
+
+            </div>
+          </div>
+<br>
+          <div class="cont">
+            <div class="">
+                <label for="">CARDHOLDER NUMBER</label>
+            </div>
+            <div class="">
+              <input class="input" id="email" type="text" name="" value="" pattern="[0-9]{4}[-\s]?[0-9]{4}[-\s]?[0-9]{4}[-\s]?[0-9]{4}"  placeholder="">
+
+            </div>
+          </div>
+          <br>
+
+          <div class="cont">
+            <!-- <div class="">
+                <label for="">EXP.DATE    (MM\YEAR)    CVC</label>
+            </div> -->
+            <div class="details">
+              <div class="">
+                <label for="">EXP.DATE</label>
+                <input class="in" type="text" name="" value="" placeholder="MM">
+              </div>
+              <div class="">
+                <label for="">(MM/YY)</label>
+                <input class="in1" type="text" name="" value="" placeholder="YY">
+              </div>
+              <div class="">
+                <label for="">CVC</label>
+                <input class="in2" type="text" name="" value="" placeholder="e.g 123">
+              </div>
+
+            </div>
+          </div>
+
+          <br>
+                    <div class="cont">
+
+                      <div class="">
+                        <button type="submit" name="button">Comfirm</button>
+
+                      </div>
+                    </div>
+
+        </form>
+      </div>
+    </div>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyB0lug7ZYe4a1AwS02NMeUMly1XoYDRi1w",
+    authDomain: "humidity-a833b.firebaseapp.com",
+    databaseURL: "https://humidity-a833b-default-rtdb.firebaseio.com",
+    projectId: "humidity-a833b",
+    storageBucket: "humidity-a833b.appspot.com",
+    messagingSenderId: "735893426058",
+    appId: "1:735893426058:web:191eef06187aaba05b8273",
+    measurementId: "G-VE3XDG56Y5"
+
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+
+
+  // Initialize Firebase
+
+  // const analytics = getDatabase(app);
+
+  const form = document.getElementById('myForm');
+
+ form.addEventListener('submit', function (e) {
+   e.preventDefault();
+
+   // Get form data
+   const name = form.elements.name.value;
+   const email = form.elements.email.value;
+
+   // Get a reference to the Firebase database
+   const database = firebase.database();
+
+   // Push data to the 'users' collection
+   database.ref('users').push({
+     name: name,
+     email: email
+   });
+
+   // Optional: Clear form fields
+   form.reset();
+ });
+
+</script>
+
+
+  </body>
+</html>

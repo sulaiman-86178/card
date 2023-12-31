@@ -1,0 +1,214 @@
+body{
+margin: 0;
+padding: 0;
+
+}
+.p{
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.c1{
+  position: relative;
+  bottom: 130px;
+  right: -30px;
+}
+.c2{
+  position: relative;
+  bottom: 130px;
+  right: -30px;
+  color: white;
+
+}
+.c3{
+  display: flex;
+  color: white;
+  position: relative;
+  bottom: 150px;
+  gap:250px;
+  left: 50px;
+}
+
+
+.container{
+  display: flex;
+
+}
+button{
+  padding:15px;
+  border-radius: 10px;
+background-color: hsl(278, 68%, 11%);
+   width: 380px;
+   color: white;
+}
+.details{
+  display: flex;
+  gap:10px;
+   width: 380px;
+}
+.in{
+  width: 50px;
+  padding:10px;
+  border-radius: 10px;
+   border: 2px  solid hsl(278, 94%, 30%) ;
+}
+.in1{
+  width: 50px;
+  padding:10px;
+  border-radius: 10px;
+   border: 2px  solid hsl(278, 94%, 30%) ;
+}
+  .in2{
+    width: 100px;
+    padding:10px;
+    border-radius: 10px;
+     border: 2px  solid hsl(278, 94%, 30%) ;
+  }
+.left{
+  background-image: url('bg-main-desktop.png');
+  width: 40%;
+  height: 800px;
+  background-repeat: no-repeat;
+}
+.card-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 800px;
+
+
+}
+.right{
+  width: 60%;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+
+
+}
+.img1{
+  position: relative;
+  top:100px;
+}
+.img{
+  position: relative;
+  bottom: 70px;
+}
+.card{
+  display: grid;
+  grid-gap: 10px;
+
+}
+.front{
+  position: relative;
+  left: 100px;
+  display: grid;
+
+}
+.back{
+  position: relative;
+  left: 180px;
+
+}
+
+ .input{
+   width: 350px;
+   padding: 15px;
+   border-radius: 10px;
+   border: 2px  solid hsl(278, 94%, 30%) ;
+
+ }
+ @media (max-width:600px) {
+   .container{
+     display: flex;
+   flex-direction: column;
+   gap:150px;
+
+   }
+
+   .left{
+     background-image: url('bg-main-mobile.png');
+     width: 100%;
+     height: 300px;
+background-size: cover;
+     background-repeat: no-repeat;
+   }
+   .card-container{
+     display: flex;
+     flex-direction: column-reverse;
+     height: 600px;
+
+
+   }
+   .right{
+     width: 100%;
+     display:flex;
+     align-items: center;
+     justify-content:center;
+
+
+   }
+   .card{
+     display: flex;
+     gap: 10px;
+     flex-direction: column-reverse;
+
+   }
+
+   .front{
+     position: relative;
+     left: 10px;
+     bottom: 100px;
+
+
+   }
+   .back{
+     position: relative;
+     left: 18px;
+
+
+   }
+   .img{
+     width: 80%;
+     position: relative;
+     left: 75px;
+    top: 20px;
+   }
+   .img1{
+     width: 80%;
+     position: relative;
+bottom: 10px;
+right: 20px;
+   }
+
+   .c1{
+     position: relative;
+    bottom: 90px;
+     right: -10px;
+     width: 200px;
+
+   }
+   .p{
+     font-weight: bolder;
+     font-size: 30px;
+     position: relative;
+     top:50px;
+     width: 300px;
+   }
+.c2{
+  width: 300px;
+}
+button{
+  padding: 5px;
+}
+.c3{
+  display: flex;
+  color: white;
+  position: relative;
+width: 200px;
+  gap:100px;
+
+  top: -100px;
+}
+
+ }
