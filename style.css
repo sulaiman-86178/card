@@ -3,6 +3,16 @@ margin: 0;
 padding: 0;
 
 }
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cvc{
+  display: flex;
+
+}
+
 .p{
   font-weight: bolder;
   font-size: 40px;
